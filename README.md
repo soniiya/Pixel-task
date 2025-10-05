@@ -26,11 +26,11 @@ These steps use Prisma to generate the client, create the database tables, and p
 
 # Command
 
-1. npx prisma generate: Generates the Prisma Client, allowing the application code to interact with the database in a type-safe manner.
+1. npx prisma generate:   Generates the Prisma Client, allowing the application code to interact with the database in a type-safe manner.
 
-2. npx prisma migrate dev --name init: Runs the first migration (init), which creates all the defined tables and schema in your development database.
+2. npx prisma migrate dev --name init:   Runs the first migration (init), which creates all the defined tables and schema in your development database.
 
-3. npm run seed: Executes the seed script to populate the database with dummy or initial data (e.g., test users, settings).
+3. npm run seed:   Executes the seed script to populate the database with dummy or initial data (e.g., test users, settings).
 
 
 # Running the Application
