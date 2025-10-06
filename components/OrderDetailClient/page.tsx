@@ -4,7 +4,6 @@ import React, { useState, useTransition, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { updateWorkOrderField } from "@/lib/action";
-// import { getAllUsers } from '@/lib/data';
 import { User as PrismaUser } from "@prisma/client";
 import FieldDisplay from "../FieldDisplay/page";
 
@@ -37,21 +36,11 @@ export default function OrderDetailClient({
     setLocalizedCreatedAt(date.toLocaleString());
   }, [initialOrder.createdAt]);
 
-  // const [allUsers, setAllUsers] = useState<Pick<PrismaUser, 'id' | 'name' | 'email'>[]>([]);
-
   const currentUserId = session?.user?.id;
   const isManager = session?.user?.role === "MANAGER";
 
   const canEditGeneral =
     isManager || currentUserId === initialOrder.createdById;
-
-  //console.log("orders", order)
-
-  // useEffect(() => {
-  //     if (isManager) {
-  //         getAllUsers().then(setAllUsers).catch(e => console.error("Failed to fetch users:", e));
-  //     }
-  // }, [isManager]);
 
   const handleUpdate = async (
     field: keyof FullWorkOrder,
