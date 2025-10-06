@@ -74,7 +74,7 @@ export default function OrderListClient({ initialOrders, totalPages, currentPage
                 </select> */}
 
                 <select
-                    className="input sm:w-1/4"
+                    className="input w-auto"
                     value={currentPriority}
                     onChange={(e) => handleFilterChange('priority', e.target.value)}
                 >

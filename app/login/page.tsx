@@ -21,13 +21,13 @@ export default function LoginPage() {
       <form onSubmit={onSubmit} className="space-y-3">
         <div>
           <label className="label">Email</label>
-          <input className="input" value={email} onChange={(e)=>setEmail(e.target.value)} type="email" required />
+          <input className="input" value={email} suppressHydrationWarning={true} onChange={(e)=>setEmail(e.target.value)} type="email" required />
         </div>
         <div>
           <label className="label">Password</label>
-          <input className="input" value={password} onChange={(e)=>setPassword(e.target.value)} type="password" required />
+          <input className="input" value={password} suppressHydrationWarning={true} onChange={(e)=>setPassword(e.target.value)} type="password" required />
         </div>
-        <button className="btn btn-secondary w-full" type="submit">Sign in</button>
+        <button className="btn btn-primary w-full" type="submit" suppressHydrationWarning={true}>Sign in</button>
         <p className="text-xs text-zinc-500">Try manager@example.com or user@example.com with password Password123!</p>
       </form>
     </div>
