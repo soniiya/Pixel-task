@@ -11,5 +11,5 @@ body { @apply bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50; }
 .badge { @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs border; }
 .header-fixed {
   background-color: #1f1844;
-  color: #fff;
+  color: #fff
 }
